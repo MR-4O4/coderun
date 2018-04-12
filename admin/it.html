@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">   
+  <link href="./style.css" rel="stylesheet">
+  <link href="./../dist/admin4b.min.css" rel="stylesheet">
+  <link href="./../dist/admin4b-highlight.min.css" rel="stylesheet">
+  <title>Admin</title>
+</head>
+<body>
+
+<div class="app">
+  <div class="app-body">
+    <div class="app-sidebar sidebar-dark sidebar-slide-left">
+  <div class="text-right">
+    <button type="button" class="btn btn-sidebar" data-dismiss="sidebar">
+      <span class="x"></span>
+    </button>
+  </div>
+  <div class="sidebar-header">
+    <img src="./assets/images/user-photo.png" class="user-photo">
+    <p class="username">
+      Vivek kothari
+      <small>Administrator</small>
+    </p>
+  </div>
+  <div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group">
+    <a href="./index.html" class="sidebar-nav-link">
+      <i class="icon-rocket"></i> Dashboard
+    </a>
+    <div class="sidebar-nav-group">
+      <a href="#components" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
+        <i class="icon-puzzle"></i> User Submissions
+      </a>
+      <div id="components" class="sidebar-nav-group collapse">
+        <a href="./cse.html" class="sidebar-nav-link">B.tech(cse)</a>
+        <a href="./it.html" class="sidebar-nav-link">B.tech(IT)</a>
+        <a href="./bca.html" class="sidebar-nav-link">BCA</a>
+      </div>
+    </div>
+    <a href="./uploadtutorial.html" class="sidebar-nav-link">
+      <i class="icon-rocket"></i> upload tutorial
+    </a>
+    <a href="./uploadques.html" class="sidebar-nav-link">
+      <i class="icon-puzzle"></i> Upload Question
+    </a>
+   
+  </div>
+  <div class="sidebar-footer">
+      <span style="font-size: 20px; color: white;"><b>LogOut :</b></span>
+    <a href="./pages/sample-pages/signin.html" data-toggle="tooltip" title="Logout">
+      <i class="fa fa-power-off"></i>
+    </a>
+  </div>
+</div>
+
+    <div class="app-content">
+      <nav class="navbar navbar-expand navbar-light bg-white">
+  <button type="button" class="btn btn-sidebar" data-toggle="sidebar">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="navbar-brand">
+    Dashboard
+  </div>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="badge badge-pill badge-primary">3</span>
+        <i class="fa fa-bell-o"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">last day to submit question for b.tech(today)</small><br>
+          <div>submission date:12-04-2018</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">last day to submit question for BCA(yesterday)</small><br>
+          <div>submission date:11-04-2018</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">last day to submit question for b.tech(IT)(13-04-2018)</small><br>
+          <div>submission date:13-04-2018</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item text-primary">
+          See all notifications
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="card-deck">
+    <div class="card text-white bg-danger">
+        <div class="card-body">
+            <h4 class="card-title">Total Students :</h4>
+            <h3><b>250</b></h3>
+        </div>
+    </div>
+    <div class="card text-white bg-primary">
+        <div class="card-body">
+            <h4 class="card-title">Total Submissions :</h4>
+            <h3><b>50</b></h3>
+        </div>
+    </div>
+    <div class="card text-white bg-dark">
+        <div class="card-body">
+            <h4 class="card-title">Total Questions :</h4>
+            <h3><b>20</b></h3>
+        </div>
+    </div>
+</div>
+<br><br>
+<h3>Today's assignment completion rate : </h3>
+<div class="progress">
+        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width:20%;">20%</div>
+    </div>
+
+    <hr><hr>
+
+    <h3>Recent submissions :</h3>
+    <div class="card">
+      <div class="card-body"><b>1.&nbsp;</b><b><i>Vivek Kothari</i></b>&nbsp;&nbsp;vivekkthr1&nbsp;&nbsp;
+        <button class="btn btn-primary btn-sm" type="button">Check code</button>&nbsp;&nbsp;
+        <button class="btn btn-success btn-sm" type="button"><span >&#10004; correct</span></button> &nbsp;&nbsp;
+        <button class="btn btn-danger btn-sm" type="button"><span >&#10008; Wrong</span></button>
+    </div> 
+  </div> 
+  <div class="card">
+      <div class="card-body"><b>1.&nbsp;</b><b><i>Sanjay Kholia</i></b>&nbsp;&nbsp;code.sanjay&nbsp;&nbsp;
+      <button class="btn btn-primary btn-sm" type="button">Check code</button>&nbsp;&nbsp;
+      <button class="btn btn-success btn-sm" type="button"><span >&#10004; correct</span></button> &nbsp;&nbsp;
+      <button class="btn btn-danger btn-sm" type="button"><span >&#10008; Wrong</span></button>
+    </div> 
+  </div> 
+  <div class="card">
+      <div class="card-body"><b>1.&nbsp;</b><b><i>Himanshu Negi</i></b>&nbsp;&nbsp;heman&nbsp;&nbsp;
+        <button class="btn btn-primary btn-sm" type="button">Check code</button>&nbsp;&nbsp;
+        <button class="btn btn-success btn-sm" type="button"><span >&#10004; correct</span></button> &nbsp;&nbsp;
+        <button class="btn btn-danger btn-sm" type="button"><span >&#10008; Wrong</span></button>
+    </div> 
+  </div> 
+  <div class="card">
+      <div class="card-body"><b>1.&nbsp;</b><b><i>Aman negi</i></b>&nbsp;&nbsp;anon&nbsp;&nbsp;
+        <button class="btn btn-primary btn-sm" type="button">Check code</button>&nbsp;&nbsp;
+        <button class="btn btn-success btn-sm" type="button"><span >&#10004; correct</span></button> &nbsp;&nbsp;
+        <button class="btn btn-danger btn-sm" type="button"><span >&#10008; Wrong</span></button>
+    </div> 
+  </div> 
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="./../dist/admin4b.min.js"></script>
+  <script src="./assets/js/admin4b.docs.js"></script>
+</body>
+</html>

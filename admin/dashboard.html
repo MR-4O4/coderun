@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+   <link href="./style.css" rel="stylesheet">
+  <link href="./../dist/admin4b.min.css" rel="stylesheet">
+  <link href="./../dist/admin4b-highlight.min.css" rel="stylesheet">
+  <title>Admin</title>
+</head>
+<body>
+
+<div class="app">
+  <div class="app-body">
+    <div class="app-sidebar sidebar-dark sidebar-slide-left">
+  <div class="text-right">
+    <button type="button" class="btn btn-sidebar" data-dismiss="sidebar">
+      <span class="x"></span>
+    </button>
+  </div>
+  <div class="sidebar-header">
+    <img src="./assets/images/user-photo.png" class="user-photo">
+    <p class="username">
+      Vivek kothari
+      <small>Administrator</small>
+    </p>
+  </div>
+  <div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group">
+    <a href="./dashboard.html" class="sidebar-nav-link">
+      <i class="icon-rocket"></i> Dashboard
+    </a>
+    <div class="sidebar-nav-group">
+      <a href="#components" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
+        <i class="icon-puzzle"></i> User Submissions
+      </a>
+      <div id="components" class="sidebar-nav-group collapse">
+        <a href="./cse.html" class="sidebar-nav-link">B.tech(cse)</a>
+        <a href="./it.html" class="sidebar-nav-link">B.tech(IT)</a>
+        <a href="./bca.html" class="sidebar-nav-link">BCA</a>
+      </div>
+    </div>
+    <a href="./uploadtutorial.html" class="sidebar-nav-link">
+      <i class="icon-rocket"></i> Upload Tutorial
+    </a>
+    <a href="./uploadques.html" class="sidebar-nav-link">
+      <i class="icon-puzzle"></i> Upload Question
+    </a>
+   
+  </div>
+  <div class="sidebar-footer">
+    <span style="font-size: 20px; color: white;"><b>LogOut :</b></span>
+    <a href="./pages/sample-pages/signin.html" data-toggle="tooltip" title="Logout">
+      <i class="fa fa-power-off"></i>
+    </a>
+  </div>
+</div>
+
+    <div class="app-content">
+      <nav class="navbar navbar-expand navbar-light bg-white">
+  <button type="button" class="btn btn-sidebar" data-toggle="sidebar">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="navbar-brand">
+    Dashboard
+  </div>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="badge badge-pill badge-primary">3</span>
+        <i class="fa fa-bell-o"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">last day to submit question for b.tech(today)</small><br>
+          <div>submission date:12-04-2018</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">last day to submit question for BCA(yesterday)</small><br>
+          <div>submission date:11-04-2018</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">last day to submit question for b.tech(IT)(13-04-2018)</small><br>
+          <div>submission date:13-04-2018</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item text-primary">
+          See all notifications
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<br><br>
+
+<div class="card-deck">
+        <div class="card text-white bg-danger">
+            <div class="card-body">
+                <h4 class="card-title">Students Online :</h4>
+                <h3><b>47</b></h3>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card text-white bg-primary">
+            <div class="card-body">
+                <h4 class="card-title">Today's Submissions :</h4>
+                <h3><b>247</b></h3>
+            </div>
+        </div>
+        <div class="card text-white bg-dark">
+            <div class="card-body">
+                <h4 class="card-title">Total Tutorials :</h4>
+                <h3><b>10</b></h3>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <h3>Today's assignment completion rate : </h3>
+    <div class="progress">
+            <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width:65%;">65%</div>
+        </div>
+
+   <br>
+
+   <div class="card border-success mb-3">
+        <div class="card-body">
+            <span style="font-size: 18">B.tech(CSE)</span> <b>status :</b> &nbsp;&nbsp; <button class="btn btn-success" type="button">Live</button>&nbsp;&nbsp;<span style="font-size: 18">Total Submissions : </span> <span><b>80</b></span>
+        </div>
+    </div>
+    <div class="card border-success mb-3">
+            <div class="card-body">
+                    <span style="font-size: 18">B.tech(IT)</span> <b>status :</b> &nbsp;&nbsp; <button class="btn btn-danger" type="button">Offline</button>&nbsp;&nbsp;<span style="font-size: 18">Total Submissions : </span> <span><b>90</b></span>
+            </div>
+        </div>
+        <div class="card border-success mb-3">
+                <div class="card-body">
+                        <span style="font-size: 18">BCA</span> <b>status :</b> &nbsp;&nbsp; <button class="btn btn-danger" type="button">Offline</button>&nbsp;&nbsp;<span style="font-size: 18">Total Submissions : </span> <span><b>77</b></span>
+                </div>
+            </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="./../dist/admin4b.min.js"></script>
+  <script src="./assets/js/admin4b.docs.js"></script>
+</body>
+</html>
