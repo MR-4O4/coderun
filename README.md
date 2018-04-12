@@ -1,4 +1,4 @@
-# coderun
+# CodeRun
 
 Coderun is a platform for enthusiastic coders to learn, practice and execute code in more than 10 popular languages right in their browser without the need of installing different IDEs for different languages.
 
