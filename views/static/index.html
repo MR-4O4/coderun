@@ -1,0 +1,369 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CodeRun - Run Code in Cloud</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/login_form.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/etline-font.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body id="top">
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+        <!-- form itself -->
+        <form id="login-form" class="zoom-anim-dialog mfp-hide">
+      <div class="container">
+        <div class="card"></div>
+        <div class="card login-details">
+          <h1 class="title">Login</h1>
+          <form>
+            <div class="input-container">
+              <input type="text" id="username" required="required"/>
+              <label for="Username">Email</label>
+              <div class="bar"></div>
+            </div>
+            <div class="input-container">
+              <input type="password" id="password" required="required"/>
+              <label for="Password">Password</label>
+              <div class="bar"></div>
+            </div>
+            <div class="button-container login-btn">
+              <button><span class="login-status-text">Login</span></button>
+            </div>
+            <div class="footer"><a href="#">Forgot your password?</a></div>
+          </form>
+        </div>
+        <div class="card alt">
+          <div class="toggle"></div>
+          <h1 class="title">Register
+            <div class="close"></div>
+          </h1>
+          <form id="register-form">
+          <div class="input-container">
+              <input type="text" id="name" required="required"/>
+              <label for="name">Name</label>
+              <div class="bar"></div>
+            </div>
+            <div class="input-container">
+              <input type="text" id="username" required="required"/>
+              <label for="Username">Email</label>
+              <div class="bar"></div>
+            </div>
+            <div class="input-container">
+              <input type="password" id="password" required="required"/>
+              <label for="Password">Password</label>
+              <div class="bar"></div>
+            </div>
+            <div class="input-container" id="multiop">
+              <input type="course" id="course" required="required"/>
+              <label for="course">Course</label>
+
+              <div class="bar"></div>
+            </div>
+            <div class="input-container sem" id="multiop1">
+              <input type="semester" id="semester" required="required"/>
+              <label for="semester">Semester</label>
+              
+              <div class="bar"></div>
+            </div>
+            <div class="input-container sec" id="multiop1">
+              <input type="section" id="section" required="required"/>
+              <label for="section">Section</label>
+              
+              <div class="bar"></div>
+            </div>
+            <div class="button-container register-btn">
+              <button class="n-btn"><span class="reg-status-text">Register</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+        </form>
+    <section class="hero">
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo"><a href="#"><img src="img/l.png" alt="CodeRun logo"></a></div>
+                    <div class="header-nav">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#learn-more">What's New</a></li>
+                                <li><a href="http://coderun.com/aboutus/" target="_blank">About Us</a></li>
+                                <li><a href="#join">Join Us</a></li>
+                            </ul>
+                            <ul class="member-actions">
+                                <li><a class="login login-popup" href="#login-form">Log in</a></li>
+                                <li><a href="/questions" class="btn-white btn-small">Continue as Guest</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#"><span></span></a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-content text-center">
+                        <h1 class="code-tagline">&lt;/ Learn, Code, Execute&gt;</h1>
+                        <span class="code-intro intro"></span>
+                    </div>
+                    <div class="landing-btns text-center">
+                         <a href="#login-form" class="login-popup btn btn-fill btn-large btn-margin-right">Login Now</a> <a href="#features" class="btn btn-accent btn-large">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="down-arrow floating-arrow"><a href="#learn-more"><i class="fa fa-angle-down"></i></a></div>
+    </section>
+    <section class="intro section-padding" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 intro-feature">
+                    <div class="intro-icon">
+                        <span data-icon="&#xe005;" class="icon"></span>
+                    </div>
+                    <div class="intro-content">
+                        <h5>Code in any Language</h5>
+                        <p>CodeRun currently supports more than <strong>10 Popular languages</strong> to code in. We will be adding support for other languages in near future.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 intro-feature">
+                    <div class="intro-icon">
+                        <span data-icon="&#xe016;" class="icon"></span>
+                    </div>
+                    <div class="intro-content">
+                        <h5>Save Projects</h5>
+                        <p>CodeRun gives you the ability to save your code on the fly. This way, none of your written programs will ever get lost.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 intro-feature">
+                    <div class="intro-icon">
+                        <span data-icon="&#xe046;" class="icon"></span>
+                    </div>
+                    <div class="intro-content last">
+                        <h5>Platform Independent</h5>
+                        <p>CodeRun is built to run seamlessly on all major devices and browsers. The responsive design make sure site looks smashing on every device under the sun.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 intro-feature">
+                    <div class="intro-icon">
+                        <span data-icon="&#xe000;" class="icon"></span>
+                    </div>
+                    <div class="intro-content">
+                        <h5>Easier for Teachers</h5>
+                        <p>With Coderun, it is easier for teachers to teach and for students to learn. Students from anywhere in the world can start learning at once.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 intro-feature">
+                    <div class="intro-icon">
+                        <span data-icon="&#xe033;" class="icon"></span>
+                    </div>
+                    <div class="intro-content">
+                        <h5>Code Anywhere, Anytime</h5>
+                        <p>Now you do not need to carry your Laptop everywhere to code, now just fire-up your browser and execute your code with CodeRun, Anytime | Anywhere.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 intro-feature">
+                    <div class="intro-icon">
+                        <span data-icon="&#xe020;" class="icon"></span>
+                    </div>
+                    <div class="intro-content">
+                        <h5>Secure and Reliable</h5>
+                        <p>We will be implementing encryption at CodeRun to make sure your code stays safe and sound at our cloud servers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features section-padding" id="learn-more">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-7">
+                    <div class="feature-list">
+                        <h3>CodeRun is for Teachers and Young Coders.</h3>
+                        <p>CodeRun allows teachers to give assignment and tasks to students and track their progress.</p>
+                        <ul class="features-stack">
+                            <li class="feature-item">
+                                <div class="feature-icon">
+                                    <span data-icon="&#xe00b;" class="icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Make Assignments</h5>
+                                    <p>Write weekly or daily assignments for students.</p>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon">
+                                    <span data-icon="&#xe001;" class="icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>IDE-like code Editor</h5>
+                                    <p>CodeRun Editor comes with a ton of useful features to write efficient code.</p>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon">
+                                    <span data-icon="&#xe00e;" class="icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>Keep Track of your Progress</h5>
+                                    <p>With CodeRun, you can get realtime statistics of your Performance.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="device-showcase">
+            <div class="devices">
+                <div class="ipad-wrap wp1"></div>
+                <div class="iphone-wrap wp2"></div>
+            </div>
+        </div>
+        <div class="responsive-feature-img"><img src="img/device.png" alt="responsive devices"></div>
+    </section>
+    <section class="features-extra section-padding" id="assets">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="feature-list">
+                        <h3>Now Code in Cloud</h3>
+                        <p>CodeRun gives you the power to push your code to the cloud in realtime. Run, Execute, Compile and test your code right from your browser in seconds.</p>
+                        <p>Now there is no need to download different softwares for coding in different languages. CodeRun makes it easy to test and save your code from the browser, written in any programming language. As we grow, we will add support for more and more languages for you to code in.
+                        </p>
+                        <a href="#" class="btn btn-ghost btn-accent btn-small">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="macbook-wrap wp3"></div>
+        <div class="responsive-feature-img"><img src="img/macbook-pro.png" alt="responsive devices"></div>
+    </section>
+    <section class="hero-strip section-padding">
+        <div class="container">
+            <div class="col-md-12 text-center">
+                <h2>
+                Customised CodeRun Editor with IDE-like features
+                </h2>
+                <p>Write your code in a clean and effective coding environment with CloudRun Editor.</p>
+                <a href="#join" class="btn btn-ghost btn-accent btn-large">Try now!</a>
+                <div class="logo-placeholder floating-logo"><img src="img/down-arrow.png" alt="Sketch Logo"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sign-up section-padding text-center" id="join">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h3>Get started with CodeRun, absolutely free</h3>
+                    <p>Get yourself confortable with a new coding environment</p>
+                    <form class="signup-form" action="#" method="POST" role="form">
+                        <div class="form-input-group">
+                            <i class="fa fa-envelope"></i><input type="text" class="" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-input-group">
+                            <i class="fa fa-lock"></i><input type="text" class="" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn-fill sign-up-btn">Sign up for free</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="to-top">
+        <div class="container">
+            <div class="row">
+                <div class="to-top-wrap">
+                    <a href="#top" class="top"><i class="fa fa-angle-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="footer-links">
+                        <ul class="footer-group">
+                            <li><a href="#join">Sign up</a></li>
+                            <li><a href="http://coderun.com/aboutus/" target="_blank">About Us</a></li>
+                            <li><a href="http://coderun.com/ppolicy/" target="_blank">Privacy Policy</a></li>
+                            <li><a href="http://coderun.com/developer/" target="_blank">Work with Us</a></li>
+                            <li><a href="http://coderun.com/support/" target="_blank">Support Us</a></li>
+                        </ul>
+                        <p>Copyright © 2016 <a href="#">CodeRun</a><br>
+                        <a href="http://coderun.com/aboutus/" target="_blank">About Us</a> | Crafted with <span class="fa fa-heart pulse2"></span> by <a href="http://www.grabthebeast.com/" target="_blank">Sanjay & Vivek</a>.</p>
+                    </div>
+                </div>
+                <div class="social-share">
+                    <p>Share CodeRun with your friends</p>
+                    <a href="https://twitter.com/coderun" target="_blank" class="twitter-share"><i class="fa fa-twitter"></i></a> 
+                    <a href="https://facebook.com/coderun" target="_blank" class="facebook-share"><i class="fa fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="bower_components/retina.js/dist/retina.js"></script>
+
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="bower_components/classie/classie.js"></script>
+    <script src="bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+
+           $(".code-intro").typed({
+                strings: ["Introducing <strong>“CodeRun”</strong>,^500 A platform to write and execute your code right in your browser without the need of installing any software. It all happens in the cloud!!!"],
+                typeSpeed: 30,
+                showCursor: true,
+                startDelay: 10
+            });
+
+
+            $('.login-popup').magnificPopup({
+                type: 'inline',
+
+                closeBtnInside: true,
+                preloader: true,
+
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+
+
+            });
+        });
+    </script>
+</body>
+</html>

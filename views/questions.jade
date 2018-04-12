@@ -1,0 +1,232 @@
+doctype html
+html
+  head
+    title Questions : CodeRun
+    link(href='css/style.css', rel='stylesheet')
+    link(href='css/font-awesome.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js')
+  body
+    header.header
+      a.header__title(href='#')
+        img(alt='logo', height='25', src='img/coderun-logo.png')
+      .header__cta
+        a(href='/home')
+          button.header__cta--button Open Editor
+        a(href='/signout')
+          button.header__cta--button(href='/signout') LogOut
+    // Modal
+    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-body
+            iframe#iframeYoutube(width='460', height='315', src='https://www.youtube.com/embed/e80BbX05D7Y', frameborder='0', allowfullscreen='')
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Close
+    .container
+      h1.heading-primary
+        | LEARN & REVISE
+        span(style='color: #5080ab;') :
+      .form-group
+        select#sel2.form-control
+          option Beginner
+          option Intermediate
+          option Pro-grammer
+      .row.card-row
+        .card.col-md-4
+          img.card-img-top(src='../img/loops.png', alt='Card image', style='width:100%')
+          .card-body
+            h4.card-title Flow Control in C
+            p.card-text Learn about if-else, for and do-while Loops in C language in easy way.
+            a.btn.btn-primary(onclick="changeVideo('1ytlgw2XFHA')", href='#') Start Learning
+        .card.col-md-4
+          img.card-img-top(src='../img/function.jpg', alt='Card image', style='width:100%')
+          .card-body
+            h4.card-title Functions
+            p.card-text Learn how to create and effectively make use of functions in C language.
+            a.btn.btn-primary(onclick="changeVideo('s7ZY1E4smqU')", href='#') Start Learning
+        .card.col-md-4
+          img.card-img-top(src='../img/recursion.jpg', alt='Card image', style='width:100%')
+          .card-body
+            h4.card-title Recursion
+            p.card-text Learn how to create recursive functions in C language.
+            a.btn.btn-primary(onclick="changeVideo('aF6YURGnJWw')", href='#') Start Learning
+        .card.col-md-4
+          img.card-img-top(src='../img/array.png', alt='Card image', style='width:100%')
+          .card-body
+            h4.card-title Introduction to arrays
+            p.card-text Learn array concept with visual examples in easy way.
+            a.btn.btn-primary(onclick="changeVideo('0EgpeYB115s')", href='#') Start Learning
+        .card.col-md-4
+          img.card-img-top(src='../img/2d-array.png', alt='Card image', style='width:100%')
+          .card-body
+            h4.card-title 2-D Array
+            p.card-text Create beautiful matrix using arrays in C language.
+            a.btn.btn-primary(onclick="changeVideo('_5szADjUhCc')", href='#') Start Learning
+        .card.col-md-4
+          img.card-img-top(src='../img/string.jpg', alt='Card image', style='width:100%')
+          .card-body
+            h4.card-title Strings
+            p.card-text Learn all about Strings in C language and take your skills to next level
+            a.btn.btn-primary(onclick="changeVideo('nrcCsIPoFG8')", href='#') Start Learning
+      hr.practice-line
+      h1.heading-primary
+        | PRACTICE
+        span(style='color: #5080ab;') (B.Tech CSE, IV SEM) :
+      .accordion
+        dl
+          dt
+            a.accordion-title.accordionTitle.js-accordionTrigger(aria-controls='accordion1', aria-expanded='false', href='#accordion1')
+              | If-Else
+              i.fa.fa-arrow-down.rt-arrow(aria-hidden='true')
+          dd#accordion1.accordion-content.accordionItem.is-collapsed(aria-hidden='true')
+            p
+              a(href='/home')
+                b Question 1:
+                |                                 Write a C program to find maximum between three numbers.
+                span.lets_go LET'S GO >
+            p
+              a(href='/home')
+                b Question 2:
+                |                                 Write a C program to check whether a number is negative, positive or zero.
+                span.lets_go LET'S GO >
+            p.no-click
+              a(href='/home')
+                b Question 3:
+                |                                 Write a C program to check whether a year is leap year or not.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p.no-click
+              a(href='/home')
+                b Question 4:
+                |                                 Write a C program to find all roots of a quadratic equation.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+          dt
+            a.accordion-title.accordionTitle.js-accordionTrigger(aria-controls='accordion2', aria-expanded='false', href='#accordion2')
+              | Functions and Recursion
+              i.fa.fa-arrow-down.rt-arrow(aria-hidden='true')
+          dd#accordion2.accordion-content.accordionItem.is-collapsed(aria-hidden='true')
+            p
+              a(href='/home')
+                b Question 1:
+                |                                 Write a C program to find cube of any number using function.
+                span.lets_go LET'S GO >
+            p.no-click
+              a(href='/home')
+                b Question 2:
+                |                                 Write a C program to check whether a number is prime, Armstrong or perfect number using functions.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p.no-click
+              a(href='/home')
+                b Question 3:
+                |                                 Write a C program to find all prime numbers between given interval using functions.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p.no-click
+              a(href='/home')
+                b Question 4:
+                |                                 Write a C program to print all natural numbers between 1 to n using recursion.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+          dt
+            a.accordion-title.accordionTitle.js-accordionTrigger(aria-controls='accordion3', aria-expanded='false', href='#accordion3')
+              | 1-D Array
+              i.fa.fa-arrow-down.rt-arrow(aria-hidden='true')
+          dd#accordion3.accordion-content.accordionItem.is-collapsed(aria-hidden='true')
+            p
+              a(href='/home')
+                b Question 1:
+                |                                 Write a C program to find maximum and minimum element in an array.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p
+              a(href='/home')
+                b Question 2:
+                |                                 Write a C program to find second largest element in an array.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p
+              a(href='/home')
+                b Question 3:
+                |                                 Write a C program to count total number of even and odd elements in an array.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p.no-click
+              a(href='/home')
+                b Question 4:
+                |                                 Write a C program to insert an element in an array.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+          dt
+            a.accordion-title.accordionTitle.js-accordionTrigger(aria-controls='accordion3', aria-expanded='false', href='#accordion3')
+              | 2-D Array & Matrices
+              i.fa.fa-arrow-down.rt-arrow(aria-hidden='true')
+          dd#accordion3.accordion-content.accordionItem.is-collapsed(aria-hidden='true')
+            p
+              a(href='/home')
+                b Question 1:
+                |                                 Write a C program to perform Scalar matrix multiplication.
+                span.lets_go LET'S GO >
+            p.no-click
+              a(href='/home')
+                b Question 2:
+                |                                 Write a C program to find sum of main diagonal elements of a matrix.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p.no-click
+              a(href='/home')
+                b Question 3:
+                |                                 Write a C program to find upper triangular matrix.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p.no-click
+              a(href='/home')
+                b Question 4:
+                |                                 Write a C program to find determinant of a matrix.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+          dt
+            a.accordion-title.accordionTitle.js-accordionTrigger(aria-controls='accordion3', aria-expanded='false', href='#accordion3')
+              | Strings
+              i.fa.fa-arrow-down.rt-arrow(aria-hidden='true')
+          dd#accordion3.accordion-content.accordionItem.is-collapsed(aria-hidden='true')
+            p.no-click
+              a(href='/home')
+                b Question 1:
+                |                                 Write a C program to find length of a string.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p.no-click
+              a(href='/home')
+                b Question 2:
+                |                                 Write a C program to find total number of alphabets, digits or special character in a string.a>
+                i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p
+              a(href='/home')
+                b Question 3:
+                |                                 Write a C program to count total number of vowels and consonants in a string.
+                span.lets_go LET'S GO >
+            p
+              a(href='/home')
+                b Question 4:
+                |                                 Write a C program to reverse order of words in a given string.
+                span.lets_go LET'S GO >
+          dt
+            a.accordion-title.accordionTitle.js-accordionTrigger(aria-controls='accordion3', aria-expanded='false', href='#accordion3')
+              | Pointers
+              i.fa.fa-arrow-down.rt-arrow(aria-hidden='true')
+          dd#accordion3.accordion-content.accordionItem.is-collapsed(aria-hidden='true')
+            p
+              a(href='/home')
+                b Question 1:
+                |                                 Write a program in C to add two numbers using pointers
+                span.lets_go LET'S GO >
+            p
+              a(href='/home')
+                b Question 2:
+                |                                 Write a program in C to find the maximum number between two numbers using a pointer.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p
+              a(href='/home')
+                b Question 3:
+                |                                 Write a program in C to store n elements in an array and print the elements using pointer
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+            p
+              a(href='/home')
+                b Question 4:
+                |                                 Write a program in C to find the largest element using Dynamic Memory Allocation.
+              i.fa.fa-lock.lets_go(aria-hidden='true', title='You are not allowed to solve this question at the moment')
+    footer.page-row
+      span Copyright © CodeRun, 2018
+    script(src='js/script.js')

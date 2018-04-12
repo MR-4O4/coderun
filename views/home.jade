@@ -1,0 +1,220 @@
+//- extends layout
+
+//- block content
+//-   h1= title
+//-   a(href='/signout')
+//-     button SIGNOUT
+//-   p Welcome to #{title}
+//-   textarea.enter-code(placeholder="Code here")(style="margin: 0px; width: 458px; height: 239px;")
+//-   br
+//-   textarea.uinput(placeholder="Ïnput here")(style="margin: 0px; width: 459px; height: 83px;")
+//-   br
+//-   button.post Run the Code
+//-   div.loading
+
+//-   script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+//-   script(src='/javascripts/compile.js')
+
+
+doctype html
+html(lang='en')
+  head
+    title Online Compiler & Interpreter, PHP, Python, Perl, C - Coderun
+    meta(charset='utf-8')
+    meta(content='2017, CodeRun', name='copyright')
+    meta(content='width=device-width,initial-scale=1', name='viewport')
+    link(href='css/material-bootstrap.css', rel='stylesheet')
+    script(src='https://use.fontawesome.com/0f25326d51.js')
+    script(src='js/jquery.js')
+    script(src='js/FileSaver.js')
+    script(src='js/material-bootstrap.js', type='text/javascript')
+    script(src='ace/src-noconflict/ace.js')
+    script(src='ace/src-noconflict/ext-language_tools.js')
+    script(src='js/custom.js')
+  body.pg-page
+    header
+      .container
+        ul.main.left
+          li.logo
+            a(href='/')
+              img(src='img/coderun-logo.png')
+          li(style='margin-left: 25px;')
+            a.inactive(href='/')
+              i.fa.fa-plus(aria-hidden='true')
+              |   New Editor
+          li
+            a.inactive.downloadnprint(href='#')
+              i.fa.fa-cloud-download(aria-hidden='true')
+              |   Download and Print
+        ul.main.right
+          li.search
+            .search-wrap
+              form(accept-charset='UTF-8', action='https://google.co.in/search', method='GET', target='_blank')
+                .search-form
+                  input(name='q', placeholder='Paste Error here and hit Enter to debug', type='text')
+          li
+            a.login-btn.savethecode(href='/save')
+              i.fa.fa-floppy-o(aria-hidden='true')
+              |    Save Code
+          li
+            a.login-btn.submitthecode(href='/submit')
+              i.fa.fa-share-alt(aria-hidden='true')
+              |    Submit This Code
+          li.upload
+            span
+              a.n_snp(href='/profile')
+                span
+                  | My Profile
+                i
+              a.n_pgr(href='/signout')
+                | Logout
+        .menu_mobile
+          span.icn
+            i
+            i
+            i
+          ul
+            li.search
+              form(accept-charset='UTF-8', action='https://google.co.in/search', method='GET', target='_blank')
+                button.icn-search(type='submit')
+                input(name='q', placeholder='Search for Error in Web', type='text')
+            li
+              a(href='/save')
+                | Save Code
+            li
+              a(href='/new')
+                | New Editor
+            li
+              a(href='/submit')
+                | Submit this Code
+            li
+              a(href='/profile')
+                | View Profile
+            li
+              a(href='/output')
+                | Logout
+    script(type='text/javascript').
+      var previewIframeLoading = true;
+    .pg
+      #compiler_modal.pg-modal(style='display: none;')
+        .pg-modal-content
+          h3
+            | Language
+          .tab.lang_type_container(data-type='compiler')
+            .item
+              label
+                | Select a language you want to code in :
+              .select
+                span
+                  span
+                    | C
+                    i.icn-arrow-down
+                .select_list.select_list--compiler
+                  ul
+                    li.checkbox
+                      input#compiler-c(checked='checked', name='modal_lang_id', type='radio', value='c')
+                      label(for='compiler-c')
+                        | C
+                    li.checkbox
+                      input#compiler-cpp(name='modal_lang_id', type='radio', value='cpp')
+                      label(for='compiler-cpp')
+                        | C++
+                    li.checkbox
+                      input#compiler-java(name='modal_lang_id', type='radio', value='java')
+                      label(for='compiler-java')
+                        | Java
+                    li.checkbox
+                      input#compiler-php(name='modal_lang_id', type='radio', value='php')
+                      label(for='compiler-php')
+                        | PHP
+                    li.checkbox
+                      input#compiler-python(name='modal_lang_id', type='radio', value='python')
+                      label(for='compiler-python')
+                        | Python
+                    li.checkbox
+                      input#compiler-ruby(name='modal_lang_id', type='radio', value='ruby')
+                      label(for='compiler-ruby')
+                        | Ruby
+                    li.checkbox
+                      input#compiler-javascript(name='modal_lang_id', type='radio', value='javascript')
+                      label(for='compiler-javascript')
+                        | Javascript
+                    li.checkbox
+                      input#compiler-csharp(name='modal_lang_id', type='radio', value='csharp')
+                      label(for='compiler-csharp')
+                        | CSharp(C#)
+                    li.checkbox
+                      input#compiler-haskell(name='modal_lang_id', type='radio', value='haskell')
+                      label(for='compiler-haskell')
+                        | Haskell
+                    li.checkbox
+                      input#compiler-clojure(name='modal_lang_id', type='radio', value='clojure')
+                      label(for='compiler-clojure')
+                        | Clojure
+                    li.checkbox
+                      input#compiler-perl(name='modal_lang_id', type='radio', value='perl')
+                      label(for='compiler-perl')
+                        | Perl
+            .item
+              button.btn.btn-save
+                | Save
+              button.btn.btn-cancel
+                | Cancel
+      form#compilerResult(accept-charset='UTF-8')
+        .pg-wrap
+          .pg-code
+            .pg-item.pg-compiler
+              .pg-settings
+                i.fa.fa-spin.fa-cog(aria-hidden='true')
+                |  CHOOSE A LANGUAGE
+                i.icn-settings
+              #editor.compiler_code_content_container(data-type='compiler')
+            .pg-title
+              input.std-in(type='std-in', name='compiler-input', placeholder='Enter Input(stdin) here, separated by space')
+          .pg-preview
+            .loadingIframe(style='display:none;')
+              .coderun-logo
+                .logo
+            .output-window
+              h1 Welcome to CodeRun IDE.
+              br
+              h2 1. Start by choosing a programming language.
+              br
+              h2 2. Write your code in the left Code Editor.
+              br
+              h2 3. Finally RUN the code to see the output.
+              br
+        .pg-control
+          button.pg-run(type='submit')
+            | Run    
+            i.fa.fa-play(aria-hidden='true')
+          .run_info.status_info
+          .run_info.memory_info
+          .run_info.time_info
+          .run_info.test_info
+        input#lang_id(name='lang_id', type='hidden')
+    footer(style='display:none;')
+      .container
+        ul
+          li
+            a(href='/faq')
+              | Help
+          li
+            a(href='/about')
+              | About
+          li
+            a(href='/privacy')
+              | Privacy
+          li
+            a(href='/contact')
+              | Contact
+          li
+            a(href='https://twitter.com/coderun', target='_blank')
+              | Twitter
+          li
+            a(href='https://www.facebook.com/coderun', target='_blank')
+              | Facebook
+        br
+        |  Graphic Era Hill University
+        p.copyright
+          | Copyright © 2017 Coderun
